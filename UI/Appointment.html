@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" type="text/css" href="Mystyle.css">
+</head>
+
+
+<body>
+   
+<nav class="navbar navbar-expand-xl bg-dark navbar-dark">
+  <a class="navbar-brand" href="index.html">
+      <img src="new.png" class="rounded-circle " alt="logo" style="width:60px;">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+       <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link btn btn-primary" href="index.html" style="color:white;">Home &nbsp<i class='fas fa-home'></i></a>
+      </li>
+      &nbsp
+      <li class="nav-item">
+        <a class="nav-link btn btn-primary" href="Appointment.html" style="color:white;">Place Appointment &nbsp<i class='fas fa-address-book'></i></a>
+      </li>
+      &nbsp
+      <li class="nav-item">
+        <a class="nav-link btn btn-primary" href="viewappoint.html" style="color:white;">View Appointment</a>
+      </li>
+      &nbsp
+      <li class="nav-item">
+        <a class="nav-link btn btn-primary" href="contactuspage.html" style="color:white;">Contact us &nbsp<i class='fas fa-phone'></i></a>
+      </li>
+    </ul>
+  </div>  
+</nav>
+<div class="container-fluid">
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">Home</a>
+  <a href="#">Place Appointment</a>
+  <a href="#">View Appointment</a>
+  <a href="#">Contact Us</a>
+</div></div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ </button>  
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<br/>
+
+
+
+  
+  <div class="container">
+
+  <div class="row"> 
+  <h2>Trainer Appointment</h2>
+  </div>
+  
+  	<form class="was-validated">
+      <div class="row">
+      <div class="form-group">
+       <label for="name">Firstname:</label>
+       <input type="name" class="form-control" id="fname" placeholder="Enter First Name" name="fname" style="width : 200px" required>
+       <div class="valid-feedback">Valid.</div>
+       <div class="invalid-feedback">Please fill out this field.</div>
+       </div> &nbsp&nbsp
+     
+     <div class="form-group">
+     <label for="name">Lastname:</label>
+     <input type="name" class="form-control" id="lname" placeholder="Enter Last Name" name="lname" style="width : 200px" required>
+     <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+     </div>
+    </div>
+
+    <div class="row">
+     <div class="form-group">
+     <label for="age">Age:</label> 
+     <input type="age" class="form-control" id="age" placeholder="Enter Age" name="age" style="width : 150px" required>
+     <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+     </div> &nbsp&nbsp
+    
+     <div class="form-group">
+     <label for="Email">Email:</label> 
+     <input type="Email" class="form-control" id="Email" placeholder="Enter the Email" name="Email" style="width : 250px" required>
+     <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+     </div> &nbsp&nbsp
+    
+     <div class="form-group">
+      <label for="phoneno">PhoneNumber:</label> 
+      <input type="PhoneNumber" class="form-control" id="Email" placeholder="Enter the Phone Number" name="PhnNo" style="width : 250px" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+     </div>
+    </div>
+    
+    <br/>
+    
+    <div class="row">
+    <h4> Address</h4>
+    </div>
+
+    <div class="row">
+      
+           <div class="form-group">
+            <label for="street">Street Address:</label></br>
+            <input type="text" class="form-control" id="street"  placeholder="" name="street" style="width: 600px" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div></br>
+           </div>
+    </div>    
+
+    <div class="row">
+         <div class="form-group">
+            <label for="city">City:</label></br>
+            <input type="text" class="form-control" id="city"  placeholder="" name="city" style="width: 150px" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+         </div> &nbsp&nbsp
+         <div class="form-group">
+            <label for="state">State:</label></br>
+            <input type="text" class="form-control" id="state"  placeholder="" name="state" style="width: 150px" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+         </div> &nbsp&nbsp
+         <div class="form-group">
+            <label for="country">Country:</label></br>
+            <input type="text" class="form-control" id="country"  placeholder="" name="country" style="width: 150px" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+         </div>
+    </div>
+
+    <div class="row">
+     <div>
+      <label for="zip">Pin:</label></br>
+      <input type="text" class="form-control" id="zip"  placeholder="" name="zip" style="width: 150px" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+     </div>
+    </div>
+    <br/>
+    
+    <div class="row">
+    <h4>Trainer Preference:</h4>
+    </div>
+
+    <div class="row">
+    <div class="form-check-inline">
+      <div class="radio">
+      <label><input type="radio" name="optradio" checked>Male Trainer</label>
+      </div>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="form-check-inline">
+     <div class="radio">
+      <label><input type="radio" name="optradio">Female Trainer</label>
+     </div>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="form-check-inline"> 
+     <div class="radio">
+      <label><input type="radio" name="optradio" >No preference</label>
+     </div>
+    </div>
+    </div>
+
+   <div class="row">
+    <div class="form-check-inline">
+    <div class="radio">
+    <label>
+      <input type="radio" name="optradio">Trainer &nbsp&nbsp
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="text" class="form-control" id="text1"  placeholder="" name="t1" style="width: 200px" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </label>
+  </div>
+  </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="form-check-inline">
+    <div class="radio">
+    <label>
+      <input type="radio" name="optradio">Others &nbsp&nbsp
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="text" class="form-control" id="text2"  placeholder="" name="t2" style="width: 200px" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </label>
+  </div>
+  </div>
+  </div>
+  <br/>
+
+
+
+  <div class="row">
+  <h4>Do you want Physiotherapist</h4>
+  </div>
+
+    <div class="row"> 
+    <div class="form-check-inline">
+     <div class="radio">
+      <label><input type="radio" name="opt" checked>Yes</label>
+    </div>
+    &nbsp&nbsp&nbsp
+    <div class="radio">
+      <label><input type="radio" name="opt">No</label>
+    </div>
+    </div>
+    </div>
+
+
+     <br/>
+
+   
+    
+    
+     
+    
+   <div class="row">
+    <table class="table table-responsive table-bordered">
+    	<thead>
+    		<tr>
+    			<th>DAY</th>
+    			<th>7-9am</th>
+    			<th>9-11am</th>
+    			<th>11-1pm</th>
+    			<th>1-3pm</th>
+    			<th>3-5pm</th>
+    		</tr>
+         </thead>
+         <tbody>
+         	<tr>
+         		<td>Monday</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt1"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt1"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt1"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt1"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt1"></label>
+                    </div>
+         		</td>
+            </tr>
+
+            <tr>
+         		<td>Tuesday</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt2"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt2"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt2"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt2"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt2"></label>
+                    </div>
+         		</td>
+            </tr>
+
+            <tr>
+         		<td>Wednesday</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt3"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt3"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt3"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt3"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt3"></label>
+                    </div>
+         		</td>
+            </tr>
+
+            <tr>
+         		<td>Thrusday</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt4"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt4"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt4"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt4"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt4"></label>
+                    </div>
+         		</td>
+            </tr>
+
+            <tr>
+         		<td>Friday</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt5"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt5"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt5"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt5"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt5"></label>
+                    </div>
+         		</td>
+            </tr>
+
+            <tr>
+         		<td>Saturday</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt6"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt6"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt6"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt6"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt6"></label>
+                    </div>
+         		</td>
+            </tr>
+
+            <tr>
+         		<td>Sunday</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt7"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt7"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt7"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt7"></label>
+                    </div>
+         		</td>
+         		<td>
+         			<div class="radio">
+                      <label><input type="radio" name="opt7"></label>
+                    </div>
+         		</td>
+            </tr>
+          </tbody>
+        </table>
+</div>
+
+<div class="row">
+<h4>Select a Package</h4>
+</div>
+
+<div class="row">
+<div class="form-check-inline">
+<div class="radio">
+      <label><input type="radio" name="optpack" checked>Only one assessment (INR 500)</label>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-check-inline">
+<div class="radio">
+      <label><input type="radio" name="optpack">4 weekly Sessions (INR 300/session)</label>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="form-check-inline">
+<div class="radio">
+      <label><input type="radio" name="optpack" >12 weekly Sessions (INR 400/session)</label>
+</div>
+</div>
+</div>
+
+<div class="row">
+  <div class="form-check-inline">
+    <div class="radio">
+      <label>
+        <input type="radio" name="optpack">Others &nbsp&nbsp
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="text" class="form-control" name="optpack" required>
+        <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+      </label>
+    </div> 
+  </div>
+</div>
+
+
+
+      
+<br/>
+
+<div class="row">
+<h4>Quote:</h4>
+</div>
+
+<div class="row">
+<div >
+<label>	
+ <input type="text" class="form-control" id="inr" required>
+ <div class="valid-feedback">Valid.</div>
+ <div class="invalid-feedback">Please fill out this field.</div>
+</label>
+</div>
+.
+<div>
+<label>
+  <input type="text" class="form-control" id="paise" required>
+  <div class="valid-feedback">Valid.</div>
+  <div class="invalid-feedback">Please fill out this field.</div>
+</label>
+</div>
+</div>
+
+</form>
+
+<button type="submit" class="btn btn-primary style="color:white;"><a href="viewappoint.html" style="color:white">Submit</a></button>
+
+     
+<script> 
+        function displayRadioValue() { 
+            var ele = document.getElementsByName('gender'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+                document.getElementById("result").innerHTML
+                        = "Gender: "+ele[i].value; 
+            } 
+        } 
+    </script> 
+  
+</div>
+</body>
+</html>
+
