@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,10 +43,10 @@
 <div class="container-fluid">
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="#">Home</a>
-  <a href="#">Place Appointment</a>
-  <a href="#">View Appointment</a>
-  <a href="#">Contact Us</a>
+  <a href="index.html">Home</a>
+  <a href="Appointment.html">Place Appointment</a>
+  <a href="viewappoint.html">View Appointment</a>
+  <a href="contactuspage.html">Contact Us</a>
 </div></div>
 <div id="main">
   <button class="openbtn" onclick="openNav()">☰ </button>  
@@ -59,21 +59,6 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
-}
-function ValidateEmail(inputText)
-{
-var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-if(inputText.value.match(mailformat))
-{
-document.form1.text1.focus();
-return true;
-}
-else
-{
-alert("You have entered an invalid email address!");
-document.form1.text1.focus();
-return false;
-}
 }
 </script>
 <br/>
@@ -101,10 +86,29 @@ return false;
       <label for="comment">Message:</label>
       <textarea class="form-control" rows="2" cols="5" id="comment"></textarea>
     </div>
-<button type="submit" class="btn btn-primary" style="color:white;" onclick="ValidateEmail(document.form1.text1)">submit</button>
+<button type="submit" class="btn btn-primary" style="color:white;"><a href="index.html" style="color:white">Submit</a></button>
 </form>
 </div>
 </div>
+<script>
+function ValidateEmail(inputText)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.form1.text1.focus();
+return false;
+}
+}
+
+</script>
+
 </div>
 </div></div>
 </body>

@@ -9,6 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   <link rel="stylesheet" type="text/css" href="Mystyle.css">
+
 </head>
 
 
@@ -44,10 +45,10 @@
 <div class="container-fluid">
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="#">Home</a>
-  <a href="#">Place Appointment</a>
-  <a href="#">View Appointment</a>
-  <a href="#">Contact Us</a>
+  <a href="index.html">Home</a>
+  <a href="Appointment.html">Place Appointment</a>
+  <a href="viewappoint.html">View Appointment</a>
+  <a href="contactuspage.html">Contact Us</a>
 </div></div>
 <div id="main">
   <button class="openbtn" onclick="openNav()">☰ </button>  
@@ -61,6 +62,8 @@ function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }
+
+
 </script>
 <br/>
 
@@ -476,7 +479,7 @@ function closeNav() {
 <div class="row">
 <div class="form-check-inline">
 <div class="radio">
-      <label><input type="radio" name="optpack" checked>Only one assessment (INR 500)</label>
+      <label><input type="radio" id="one time assessment only" name="optpack" value="500" onclick="getvalue(this)">Only one assessment (INR 500)</label>
 </div>
 </div>
 </div>
@@ -484,7 +487,7 @@ function closeNav() {
 <div class="row">
 <div class="form-check-inline">
 <div class="radio">
-      <label><input type="radio" name="optpack">4 weekly Sessions (INR 300/session)</label>
+      <label><input type="radio" id="4 weekly sessions" name="optpack" value="400" onclick="getvalue(this)">4 weekly Sessions (INR 400/session)</label>
 </div>
 </div>
 </div>
@@ -492,7 +495,7 @@ function closeNav() {
 <div class="row">
 <div class="form-check-inline">
 <div class="radio">
-      <label><input type="radio" name="optpack" >12 weekly Sessions (INR 400/session)</label>
+      <label><input type="radio" id="12 weekly sessions" name="optpack" value="300" onclick="getvalue(this)">12 weekly Sessions (INR 300/session)</label>
 </div>
 </div>
 </div>
@@ -501,12 +504,12 @@ function closeNav() {
   <div class="form-check-inline">
     <div class="radio">
       <label>
-        <input type="radio" name="optpack">Others &nbsp&nbsp
+        <input type="radio" id="others" name="optpack" value="Quote will be shared on phone call" onclick="getmessage(this)">Others &nbsp&nbsp
       </label>
     </div>
     <div>
       <label>
-        <input type="text" class="form-control" name="optpack" required>
+        <input type="text" class="form-control" name="optpack" id="msg" readonly required>
         <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
       </label>
@@ -526,7 +529,7 @@ function closeNav() {
 <div class="row">
 <div >
 <label>	
- <input type="text" class="form-control" id="inr" required>
+ <input type="text" class="form-control" id="total" readonly required>
  <div class="valid-feedback">Valid.</div>
  <div class="invalid-feedback">Please fill out this field.</div>
 </label>
@@ -534,7 +537,7 @@ function closeNav() {
 .
 <div>
 <label>
-  <input type="text" class="form-control" id="paise" required>
+  <input type="text" class="form-control" id="val" readonly required>
   <div class="valid-feedback">Valid.</div>
   <div class="invalid-feedback">Please fill out this field.</div>
 </label>
@@ -542,21 +545,12 @@ function closeNav() {
 </div>
 
 </form>
+<script src="Radio.js"></script>
 
 <button type="submit" class="btn btn-primary style="color:white;"><a href="viewappoint.html" style="color:white">Submit</a></button>
 
      
-<script> 
-        function displayRadioValue() { 
-            var ele = document.getElementsByName('gender'); 
-              
-            for(i = 0; i < ele.length; i++) { 
-                if(ele[i].checked) 
-                document.getElementById("result").innerHTML
-                        = "Gender: "+ele[i].value; 
-            } 
-        } 
-    </script> 
+
   
 </div>
 </body>
