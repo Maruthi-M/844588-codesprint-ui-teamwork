@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" type="text/css" href="Mystyle.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-xl bg-dark navbar-dark">
+  <a class="navbar-brand" href="index.html">
+      <img src="new.png" class="rounded-circle " alt="logo" style="width:60px;">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+       <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link btn btn-secondary" href="index.html" style="color:white;">Home &nbsp<i class='fas fa-home'></i></a>
+      </li>
+      &nbsp
+      <li class="nav-item">
+        <a class="nav-link btn btn-secondary" href="Appointment.html" style="color:white;">Place Appointment &nbsp<i class='fas fa-address-book'></i></a>
+      </li>
+      &nbsp
+      <li class="nav-item">
+        <a class="nav-link btn btn-secondary" href="viewappoint.html" style="color:white;">View Appointment</a>
+      </li>
+      &nbsp
+      <li class="nav-item">
+        <a class="nav-link btn btn-secondary" href="contactuspage.html" style="color:white;">Contact us &nbsp<i class='fas fa-phone'></i></a>
+      </li>
+    </ul>
+  </div>  
+</nav>
+<div class="container-fluid">
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="index.html">Home</a>
+  <a href="Appointment.html">Place Appointment</a>
+  <a href="viewappoint.html">View Appointment</a>
+  <a href="contactuspage.html">Contact Us</a>
+</div></div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ </button>  
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<br/>
+
+
+<div class="container">
+  <h2>view appointment</h2>
+            
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+       <th>S.NO.</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Package</th>
+      <th>TrainerPreference</th>
+      <th> Phone</th>
+      </tr>
+      <tr>
+      <td>1</td>
+      <td>kalpana</td>
+      <td>t nagar</td>
+      <td>Chennai</td>
+      <td>1 lpa</td>
+      <td>anusha</td>
+      <td style="text-decoration: none;">9811111111</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>saru</td>
+      <td>karapakkam</td>
+      <td>Chennai</td>
+      <td>23lpa</td>
+      <td>Rahul</td>
+      <td>9712233456</td>
+    </tr>
+
+    </thead>
+    </tbody>
+
+</table
+</html>
